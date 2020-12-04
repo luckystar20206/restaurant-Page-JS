@@ -44,6 +44,13 @@ const menu = () => {
         menuTable.innerHTML = `<h2>${menu}</h2>`;
         menuTable.classList.add('menu-table')
         menuContainer.appendChild(menuTable);
+        for(let i = 0; i < 10; i++) {
+            let item = document.createElement('p');
+            item.classList.add('menu-item');
+            item.textContent = 'item';
+            menuTable.appendChild(item);
+        }
+
     });
 
     menuContainer.classList.add('menu-flex');
@@ -65,6 +72,8 @@ const contact = () => {
     const background = document.createElement('div');
     background.classList.add('contact-background');
     homePage.appendChild(background);
+
+    
 
     
 

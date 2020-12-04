@@ -69,12 +69,17 @@
     border-radius: 5px;
     height: 500px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     padding: 1em;
     font-size: 1.4em;
     background-color: rgba(235, 235, 225, .3);
     transition: 120ms ease-in;
  
+}
+
+.menu-table h2 {
+    text-align: center;
+    padding-bottom: 1em;
 }
 
 .menu-table:hover {
@@ -87,4 +92,8 @@
     justify-content: space-around;
     align-items: center;
     height: 100%;
+}
+
+.menu-item {
+    padding: 0.5em;
 }
