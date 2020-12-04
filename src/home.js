@@ -12,7 +12,7 @@ const home = () => {
     background.classList.add('home-background');
     homePage.appendChild(background);
     const heroTitle = document.createElement('h1');
-    heroTitle.textContent = 'Majestic';
+    heroTitle.textContent = 'Majestic.';
     heroTitle.classList.add('hero-title');
     homePage.appendChild(heroTitle);
     const homeLink = document.getElementById('home');
@@ -73,7 +73,19 @@ const contact = () => {
     background.classList.add('contact-background');
     homePage.appendChild(background);
 
-    
+    const header = document.createElement('div');
+    header.classList.add('contact-section');
+    header.innerHTML = `<h1 class='contact-header'>Contact us</h1>
+    <p class='contact-info'> <span class='tell'>TEL</span> +57 3104297026 </p>`
+
+    homePage.appendChild(header);
+
+
+    const socials = document.createElement('ul');
+    socials.classList.add('socials');
+    socials.innerHTML = `<span class='socials-title'>Socials: </span><li><i class="fab fa-facebook icon"></i></li>
+    <li><i class="fab fa-instagram icon"></i></li>`;
+    header.appendChild(socials);
 
     
 
