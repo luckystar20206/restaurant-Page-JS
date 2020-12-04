@@ -3,23 +3,23 @@ html {
 }
 
 .navbar {
-    
+    font-family: 'Sansita Swashed', cursive;
     padding: 1rem;
     position: absolute;
     bottom: 0;
-    width: calc(100% - 2rem - 2px);
-    border: 1px solid black;
-    
+    width: calc(100% - 2rem);
+    background-color: black;
 }
 
 .navbar nav {
     display: flex;
     justify-content: center;
-    border: 1px solid red;
+
 }
 
 .nav-item {
     margin: 0 1em;
     font-size: 1.4em;
     cursor: pointer;
+    color: white;
 }

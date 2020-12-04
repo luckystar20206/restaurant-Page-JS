@@ -1,0 +1,9 @@
+
+.home-background {
+    background-image: url(../imgs/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    height: 100vh;
+
+}

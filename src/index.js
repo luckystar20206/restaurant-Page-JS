@@ -1,5 +1,8 @@
 import "../assets/css/reset.css";
 import "../assets/css/navbar.css";
+import "../assets/css/style.css";
 
-const element = document.querySelector('.content');
-element.textContent = 'Hello world! 2';
+
+import { home } from "./home";
+
+home();
