@@ -2,40 +2,49 @@ const pageLoad = (() => {
 
 const HOMEPAGE = document.querySelector('.content');
 
-const home = () => {
+const clearContent = () => {
     while(HOMEPAGE.firstChild) {
         HOMEPAGE.removeChild(HOMEPAGE.firstChild);
     }
+}
+
+const clearActiveTab = () => {
     const prevAct = document.querySelectorAll('.active');
     prevAct.forEach(tag => {
         tag.classList.remove('active');
     });
+}
+
+const generateBackground = (section) => {
     const background = document.createElement('div');
-    background.classList.add('home-background');
+    background.classList.add(`${section}-background`);
     HOMEPAGE.appendChild(background);
+}
+
+const highlightTab = (tab) => {
+    const link = document.getElementById(tab);
+    link.classList.add('active');
+}
+
+const home = () => {
+    clearContent();
+    clearActiveTab();
+    generateBackground('home');
+    highlightTab('home');
+
     const heroTitle = document.createElement('h1');
     heroTitle.textContent = 'Majestic.';
     heroTitle.classList.add('hero-title');
     HOMEPAGE.appendChild(heroTitle);
-    const homeLink = document.getElementById('home');
-    homeLink.classList.add('active');
+    
 }
 
 const menu = () => {
-    while(HOMEPAGE.firstChild) {
-        HOMEPAGE.removeChild(HOMEPAGE.firstChild);
-    }
+    clearContent();
+    clearActiveTab();
+    generateBackground('menu');
 
-    const prevAct = document.querySelectorAll('.active');
-    prevAct.forEach(tag => {
-        tag.classList.remove('active');
-    });
-    const menuLink = document.getElementById('menu');
-    menuLink.classList.add('active');
-
-    const background = document.createElement('div');
-    background.classList.add('menu-background');
-    HOMEPAGE.appendChild(background);
+    highlightTab('menu');
     
     const menuContainer = document.createElement('div');
     HOMEPAGE.appendChild(menuContainer);
@@ -60,20 +69,11 @@ const menu = () => {
 }
 
 const contact = () => {
-    while(HOMEPAGE.firstChild) {
-        HOMEPAGE.removeChild(HOMEPAGE.firstChild);
-    }
+    clearContent();
+    clearActiveTab();
+    generateBackground('contact');
 
-    const prevAct = document.querySelectorAll('.active');
-    prevAct.forEach(tag => {
-        tag.classList.remove('active');
-    });
-    const contactLink = document.getElementById('contact');
-    contactLink.classList.add('active');
-
-    const background = document.createElement('div');
-    background.classList.add('contact-background');
-    HOMEPAGE.appendChild(background);
+    highlightTab('contact');
 
     const header = document.createElement('div');
     header.classList.add('contact-section');
@@ -88,9 +88,6 @@ const contact = () => {
     socials.innerHTML = `<span class='socials-title'>Socials: </span><li><i class="fab fa-facebook icon"></i></li>
     <li><i class="fab fa-instagram icon"></i></li>`;
     header.appendChild(socials);
-
-    
-
 }
 
 return {
