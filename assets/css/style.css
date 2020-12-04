@@ -15,7 +15,17 @@
 }
 
 .menu-background {
-    background-image: url(../imgs/zakaria-zayane-0uAVsDcyD0M-unsplash.jpg);
+    background-image: url(../imgs/dinesh-ramaswamy-p-sEkj6-hAM-unsplash.jpg);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-background {
+    background-image: url(../imgs/clem-onojeghuo-zlABb6Gke24-unsplash.jpg);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -31,7 +41,7 @@
     align-items: center;
     height: 50%;
     font-weight: 100;
-    color: white;
+    color: yellow;
     z-index: 1;
 }
 
@@ -51,4 +61,30 @@
     transform-origin: left;
     transition: 200ms ease-in;
     transform: scaleX(1)
+}
+
+.menu-table {
+    color: black;
+    width: calc(80%/3);
+    border-radius: 5px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 1.4em;
+    background-color: rgba(235, 235, 225, .3);
+    transition: 120ms ease-in;
+ 
+}
+
+.menu-table:hover {
+    background-color: rgba(235, 235, 205, .5);
+}
+
+
+.menu-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }

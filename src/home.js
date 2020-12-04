@@ -34,6 +34,19 @@ const menu = () => {
     const background = document.createElement('div');
     background.classList.add('menu-background');
     homePage.appendChild(background);
+    
+    const menuContainer = document.createElement('div');
+    homePage.appendChild(menuContainer);
+
+    let menus = ['Dishes', 'Desserts', 'Drinks']
+    menus.forEach(menu => {
+        const menuTable = document.createElement('div');
+        menuTable.innerHTML = `<h2>${menu}</h2>`;
+        menuTable.classList.add('menu-table')
+        menuContainer.appendChild(menuTable);
+    });
+
+    menuContainer.classList.add('menu-flex');
 
 }
 
@@ -48,6 +61,12 @@ const contact = () => {
     });
     const contactLink = document.getElementById('contact');
     contactLink.classList.add('active');
+
+    const background = document.createElement('div');
+    background.classList.add('contact-background');
+    homePage.appendChild(background);
+
+    
 
 }
 
