@@ -1,35 +1,35 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: {
-       index: "./src/index.js"
-    }, 
+  entry: {
+    index: './src/index.js',
+  },
 
-    output: {
-        filename: "main.js"
-    },
+  output: {
+    filename: 'main.js',
+  },
 
-    module: {
-        rules: [
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
           {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
-          },
-          {
-            test: /\.(png|jpe?g|gif)$/i,
-            use: [
-              {
-                loader: 'file-loader',
-              },
-            ],
+            loader: 'file-loader',
           },
         ],
-    },
+      },
+    ],
+  },
 
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Restaurant page'
-        }),
-    ]
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Restaurant page',
+    }),
+  ],
 
-}
+};
