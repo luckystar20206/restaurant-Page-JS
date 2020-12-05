@@ -18,7 +18,7 @@ All the assets were added manipulating the page DOM using JavaScript, also Webpa
 
 ## Live Demo
 
-[Live Demo Link](https://shaqri.github.io/Book_library/?status=read)
+[Live Demo Link](https://shaqri.github.io/restaurantPage-JS/)
 
 
 ## Getting Started
