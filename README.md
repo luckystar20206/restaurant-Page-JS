@@ -6,7 +6,7 @@ Simple restaurant page built using JavaScript DOM manipulation, Webpack loaders,
 All the assets were added manipulating the page DOM using JavaScript, also Webpack was used to bundle all the .js, png, and CSS files.
 
 
-![APP SCREENSHOT](assets/imgs/SCREENSHOT.png)  
+![APP SCREENSHOT](assets/imgs/SCREENSHOT.PNG)  
 
 
 ## Built With
