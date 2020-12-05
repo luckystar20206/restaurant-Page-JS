@@ -1,0 +1,137 @@
+
+.content {
+  height: 100vh;
+  width: 100%;
+}
+
+.home-background {
+  background-position: center;
+  background-size: cover;
+  background-image: url(../imgs/vishwas-katti-UrQ_BS9bLXQ-unsplash.jpg);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+.menu-background {
+  background-image: url(../imgs/dinesh-ramaswamy-p-sEkj6-hAM-unsplash.jpg);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact-background {
+  background-image: url(../imgs/clem-onojeghuo-zlABb6Gke24-unsplash.jpg);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-title {
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  font-weight: 100;
+  color: yellow;
+  z-index: 1;
+}
+
+.active {
+  position: relative;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: red;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  transform-origin: left;
+  transition: 200ms ease-in;
+  transform: scaleX(1);
+}
+
+.menu-table {
+  color: black;
+  width: calc(80% / 3);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  font-size: 2em;
+  background-color: rgba(235, 235, 225, 0.3);
+  transition: 120ms ease-in;
+}
+
+.menu-table h2 {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.menu-table:hover {
+  background-color: rgba(235, 235, 205, 0.5);
+}
+
+.menu-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-item {
+  padding: 0.3em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-section {
+  color: white;
+  font-size: 2.3em;
+  width: 30%;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contact-header {
+  padding: 1em 0;
+  font-size: 1.5em;
+}
+
+.contact-info {
+  border-bottom: 1px solid yellow;
+}
+
+.icon {
+  color: white;
+  padding: 0 0.5px;
+}
+
+.socials-title {
+  margin-right: 0.5em;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+@media (max-width: 1366px) {
+  body {
+    font-size: 11px;
+  }
+}
